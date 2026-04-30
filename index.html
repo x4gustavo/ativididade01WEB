@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretório de E-mails - IFAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="fundo-app">
+        
+        <div class="card">
+            <svg fill="none" height="56" stroke="#cd191e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="margin-bottom: 15px;" viewBox="0 0 24 24" width="56" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <h2>Diretório IFAL</h2>
+            <p>Cadastro e Pesquisa de E-mails Institucionais. Rápido, prático e organizado.</p>
+        </div>
+
+        <div class="card">
+            <h2>Cadastrar Novo E-mail</h2>
+            <form id="formCadastro">
+                <div class="input-group">
+                    <input type="email" id="emailInput" placeholder="exemplo@ifal.edu.br" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="cursoInput" style="font-size: 14px; margin-bottom: 8px; display:    block; color: #555;">
+                        Selecione os Cursos (Segure Ctrl ou Cmd para escolher mais de um):
+                    </label>
+                    <select id="cursoInput" multiple required size="11">
+                        <option value="Informática">Informática</option>
+                        <option value="Eletroeletrônica">Eletroeletrônica</option>
+                        <option value="Sistemas de Energia Renovável">Sistemas de Energia Renovável</option>
+                        <option value="Eletroeletrônica (Subsequente)">Eletroeletrônica (Subsequente)</option>
+                        <option value="Logística (Subsequente)">Logística (Subsequente)</option>
+                        <option value="Licenciatura em Letras-Português">Licenciatura em Letras-Português</option>
+                        <option value="Bacharelado em Sistemas de Informação">Bacharelado em Sistemas de Informação</option>
+                        <option value="Tecnológico em Sistemas Biomédicos">Tecnológico em Sistemas Biomédicos</option>
+                        <option value="Tecnológico em Logística">Tecnológico em Logística</option>
+                        <option value="Especialização em Ciências da Natureza e Matemática para o Ensino Médio">Especialização em Ciências da Natureza e Matemática para o Ensino Médio</option>
+                        <option value="Especialização em Linguagem e Práticas Sociais">Especialização em Linguagem e Práticas Sociais</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-principal">
+                    <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;"> 
+                        <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Cadastrar
+                </button>
+            </form>
+            <div id="mensagem" class="aviso oculta"></div>
+        </div>
+
+        <div class="card">
+            <h2>Pesquisar E-mails</h2>
+            
+            <div class="input-group">
+                <input type="text" id="barraPesquisa" placeholder="Buscar por e-mail...">
+            </div>
+            <div class="input-group">
+                <select id="filtroCurso">
+                    <option value="Todos">Todos os Cursos</option>
+                    <option value="Informática">Informática</option>
+                    <option value="Edificações">Edificações</option>
+                    <option value="Mecânica">Mecânica</option>
+                    <option value="Eletrotécnica">Eletrotécnica</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+
+            <ul id="listaEmails" class="resultados">
+                </ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

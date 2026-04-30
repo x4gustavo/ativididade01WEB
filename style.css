@@ -1,0 +1,147 @@
+/* ---- RESET E FUNDO PRINCIPAL ---- */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #050835; /* Cor de fundo transferida para o body por garantia */
+}
+
+.fundo-app {
+    background-color: #2f9e41 !important;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333333;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* ---- CARTOES ---- */
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 500px; /* Limita a largura para não ficar esticado no PC */
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #050835;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* ---- FORMULARIOS ---- */
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input[type="email"], input[type="text"], select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d9e6;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #f9fbfd;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2b61d6;
+}
+
+/* ---- BOTAO PRINCIPAL ---- */
+.btn-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cd191e;
+    color: #ffffff !important;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(43, 97, 214, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-principal:active {
+    transform: scale(0.98);
+}
+
+.btn-principal:hover {
+    background-color: #1a4ab5;
+}
+
+/* ---- MENSAGENS E AVISOS ---- */
+.aviso {
+    font-size: 13px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    display: block;
+}
+
+.oculta { display: none; }
+
+.msg-erro {
+    color: #842029;
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+.msg-sucesso {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-left: 4px solid #198754;
+}
+
+/* ---- LISTA DE RESULTADOS ---- */
+.resultados {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.resultados li {
+    background: #f4f7f9;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #cd191e;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.tag-curso {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 5px;
+}
